@@ -13,7 +13,7 @@ namespace xadrez
         private HashSet<Peca> pecas;
         private HashSet<Peca> capturadas;
         public bool xeque { get; private set; }
-        private Peca vulneravelEnPassant;
+        public Peca vulneravelEnPassant { get; private set; }
 
         public PartidaDeXadrez()
         {
@@ -143,6 +143,13 @@ namespace xadrez
                 turno++;
                 mudaJogador();
             }
+
+            Peca p = tab.peca(destino);
+            
+            // #jogadaespecial en passant
+            if (p is Peao && (destino.Linha == origem.Linha - 2 || destino.Linha == origem.Linha + 2))
+                vulneravelEnPassant = p;
+            else vulneravelEnPassant = null;
         }
 
         public void desfazMovimento(Posicao origem, Posicao destino, Peca pecaCapturada)
@@ -218,7 +225,7 @@ namespace xadrez
             colocarNovaPeca('h', 1, new Torre(Cor.Branca, tab));
 
             for (int i = 0; i < 8; i++) 
-                colocarNovaPeca((char)('a' + i), 2, new Peao(Cor.Branca, tab));
+                colocarNovaPeca((char)('a' + i), 2, new Peao(Cor.Branca, tab, this));
 
             colocarNovaPeca('a', 8, new Torre(Cor.Amarela, tab));
             colocarNovaPeca('b', 8, new Cavalo(Cor.Amarela, tab));
@@ -230,7 +237,7 @@ namespace xadrez
             colocarNovaPeca('h', 8, new Torre(Cor.Amarela, tab));
 
             for (int i = 0; i < 8; i++)
-                colocarNovaPeca((char)('h' - i), 7, new Peao(Cor.Amarela, tab));
+                colocarNovaPeca((char)('h' - i), 7, new Peao(Cor.Amarela, tab, this));
         }
     }
 }

@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsLambda", "ProductsL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeLambda", "EmployeeLambda\EmployeeLambda.csproj", "{3BACEF88-291E-4D0B-BDD0-AA1276555D60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XadrezConsole", "XadrezConsole\XadrezConsole.csproj", "{285A5683-347A-450D-9549-66BEEF198387}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XadrezConsole", "XadrezConsole\XadrezConsole.csproj", "{285A5683-347A-450D-9549-66BEEF198387}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesWebMvc", "SalesWebMvc\SalesWebMvc.csproj", "{BBC79680-3E16-453F-9BA9-45F21FA6BA89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{285A5683-347A-450D-9549-66BEEF198387}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{285A5683-347A-450D-9549-66BEEF198387}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{285A5683-347A-450D-9549-66BEEF198387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC79680-3E16-453F-9BA9-45F21FA6BA89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC79680-3E16-453F-9BA9-45F21FA6BA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC79680-3E16-453F-9BA9-45F21FA6BA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC79680-3E16-453F-9BA9-45F21FA6BA89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

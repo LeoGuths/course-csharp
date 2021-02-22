@@ -13,6 +13,7 @@ namespace xadrez
         private HashSet<Peca> pecas;
         private HashSet<Peca> capturadas;
         public bool xeque { get; private set; }
+        private Peca vulneravelEnPassant;
 
         public PartidaDeXadrez()
         {
@@ -22,6 +23,7 @@ namespace xadrez
             Terminada = false;
             xeque = false;
             pecas = new HashSet<Peca>();
+            vulneravelEnPassant = null;
             capturadas = new HashSet<Peca>();
             colocarPecas();
         }
